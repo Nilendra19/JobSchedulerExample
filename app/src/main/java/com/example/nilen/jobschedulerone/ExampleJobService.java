@@ -17,6 +17,8 @@ public class ExampleJobService extends JobService {
         return true;
     }
 
+
+
     private void doBackgroundWork(final JobParameters params) {
 
         new Thread(new Runnable() {
@@ -49,5 +51,13 @@ public class ExampleJobService extends JobService {
         Log.d(TAG, "Job cancelled before completion");
         jobCancelled = true;
         return true;
+    }
+
+
+    public static int addNumber(int i, int j) {
+
+        int sum = i + j;
+        return sum;
+
     }
 }
